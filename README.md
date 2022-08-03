@@ -24,3 +24,46 @@ To download and install required package
 pip install -r requirements.txt
 
 ```
+To add file to git 
+```
+git add .
+```
+Or
+```
+git add filename
+```
+> Note : Ignore the file/folder  to git write the name of file/folder in .gitignore
+
+To check the status 
+```
+git status
+```
+To create commit all changes by git
+```
+git commit -m "any message"
+
+```
+To check all version maintain by git
+```
+git log
+
+```
+To send changes to Github
+```
+git push origin main
+```
+To check remote url of Github repo
+```
+git remote -v
+```
+
+To set up CD/CI pipline in heroko 
+1. heroko_email = khanabdulaziz532@gmail.com
+2. heroko_API_KEY = f731396e-9cd3-4385-893d-e70bdc1f7932
+3. heroko_APP_NAME = abdul-machine-project
+
+BUILD DOCKER IMAGE
+```
+docker build -t <image_name>:<tag_name> .
+```
+> Note : Docker image must be in lower case
