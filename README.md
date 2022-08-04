@@ -59,7 +59,7 @@ git remote -v
 
 To set up CD/CI pipline in heroko 
 1. heroko_email = khanabdulaziz532@gmail.com
-2. heroko_API_KEY = f731396e-9cd3-4385-893d-e70bdc1f7932
+2. heroko_API_KEY = <>
 3. heroko_APP_NAME = abdul-machine-project
 
 BUILD DOCKER IMAGE
