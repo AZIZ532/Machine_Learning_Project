@@ -67,3 +67,8 @@ BUILD DOCKER IMAGE
 docker build -t <image_name>:<tag_name> .
 ```
 > Note : Docker image must be in lower case
+
+```
+python setup.py install
+```
+and this will install all the packages automatically 
