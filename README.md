@@ -72,3 +72,8 @@ docker build -t <image_name>:<tag_name> .
 python setup.py install
 ```
 and this will install all the packages automatically 
+
+To install ipykernel 
+```
+pip install ipykernel
+```
