@@ -1,6 +1,6 @@
-from housing.entity.config_entity import DataIngestionConfig,DataTransformationConfig,DataValidationConfig, ModelEvalutionConfig, ModelPusherConfig, ModelTrainerConfig, TrainingPipelineConfig  \
+from housing.entity.config_entity import DataIngestionConfig, DataTransformationConfig, DataValidationConfig, ModelEvalutionConfig, ModelPusherConfig, ModelTrainerConfig, TrainingPipelineConfig  \
       , ModelEvalutionConfig ,ModelPusherConfig, TrainingPipelineConfig
-from housing import util
+from housing.utility.util.py import real_yaml_file
 
 class Configuration:
     def __init__(self) -> None:
