@@ -2,7 +2,10 @@
 import sys
 from flask import Flask
 from housing.exception import HousingException
-from housing.logger import logging
+from housing.logger import *
+import logging
+from housing.config.configuration import Configuration
+
 app=Flask(__name__)
 
 @app.route("/",methods = ['POST','GET'])
