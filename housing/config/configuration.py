@@ -1,21 +1,21 @@
 import logging
 from housing.entity.config_entity import DataIngestionConfig, DataTransformationConfig, DataValidationConfig, ModelEvalutionConfig, ModelPusherConfig, ModelTrainerConfig, TrainingPipelineConfig  \
       , ModelEvalutionConfig ,ModelPusherConfig, TrainingPipelineConfig
-from housing.utility.util import read_yaml_file
+from housing.util.util import read_yaml_file
 from housing.constant import *
 from housing.logger import *
-
+from housing.util.util import read_yaml_file
 from housing.exception import HousingException
 import os,sys
 
 
 
-class Configuration:
+class Configuration():
     def __init__(self,
                 config_file_path:str = CONFIG_FILE_PATH,
                 current_time_stamp:str = CURRUNT_TIME_STAMP
-                ) -> None:
-                self.config_info =  read_yaml_file(file_path = config_file_path)
+                ):
+                self.config_info =  read_yaml_file(config_file_path)
                 self.training_pipeline_config = self.get_training_pipeline_config()
                 self.time_stamp = current_time_stamp
 

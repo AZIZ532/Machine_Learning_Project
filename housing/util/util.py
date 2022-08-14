@@ -3,7 +3,6 @@ import yaml
 from housing.exception import HousingException
 import os,sys
 
-config_file_path = config_file_path = os.path.join("config","config.yaml")
 def read_yaml_file(config_file_path:str) -> dict:
 
     try:
