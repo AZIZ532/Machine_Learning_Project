@@ -5,4 +5,5 @@ sklearn
 pandas
 PyYAML
 six
+tarfile
 -e .
