@@ -1,4 +1,6 @@
 numpy
+matplotlib
+seaborn
 flask
 gunicorn
 sklearn

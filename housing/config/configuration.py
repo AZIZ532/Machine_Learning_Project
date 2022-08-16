@@ -1,4 +1,5 @@
 import logging
+from msilib import schema
 from housing.entity.config_entity import DataIngestionConfig, DataTransformationConfig, DataValidationConfig, ModelEvalutionConfig, ModelPusherConfig, ModelTrainerConfig, TrainingPipelineConfig  \
       , ModelEvalutionConfig ,ModelPusherConfig, TrainingPipelineConfig
 from housing.util.util import read_yaml_file
@@ -48,7 +49,7 @@ class Configuration():
             )
 
             data_ingestion_config = DataIngestionConfig(dataset_download_url = dataset_download_url ,
-                                                         tgz_download_dir = tgz_download_dir,
+                                                          tgz_download_dir = tgz_download_dir,
                                                           raw_data_dir = raw_data_dir, 
                                                           ingested_train_dir = ingested_train_dir, 
                                                           ingested_test_dir = ingested_test_dir
@@ -59,7 +60,14 @@ class Configuration():
             raise HousingException(e,sys) from e 
 
     def get_data_validation_config(self) -> DataValidationConfig:
-        pass
+        try:
+            schema_file_path = None
+            data_validation_config = DataValidationConfig(
+                    schema_file_path=schema_file_path
+            )
+            return data_validation_config 
+        except Exception as e:
+            raise HousingException(e,sys) from e
 
     def get_data_transformation_config(self) -> DataTransformationConfig:
         pass
