@@ -1,9 +1,9 @@
 import logging
-from housing.pipeline.pipeline import Pipeline
-from housing.exception import HousingException
+#from housing.pipeline.pipeline import Pipeline
+#from housing.exception import HousingException
 from housing.logger import logging
 import logging
-import sys,os 
+#import sys,os 
 from housing.config.configuration import Configuration
 def main():
     try:

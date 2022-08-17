@@ -73,7 +73,7 @@ class Configuration():
 
             schema_file_path = os.path.join(ROOT_DIR,
             data_validation_config[DATA_VALIDATION_SCHEMA_DIR_KEY],
-            data_validation_config[DATA_VALIDATION_SCHEMA_FILE_NAME_KEY]]
+            data_validation_config[DATA_VALIDATION_SCHEMA_FILE_NAME_KEY]
             )
             
             report_file_path = os.path.join(data_validation_artifact_dir,
