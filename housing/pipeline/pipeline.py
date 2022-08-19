@@ -6,6 +6,7 @@ from housing.entity.config_entity import DataIngestionConfig
 from housing.component.data_ingestion import DataIngestion
 from housing.component.data_validation import DataValidation
 from housing.entity.artifact_entity import DataValidationArtifact
+from housing.entity.config_entity import DataValidationConfig
 import os,sys
 
 
