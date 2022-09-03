@@ -8,5 +8,4 @@ pandas
 PyYAML
 six
 evidently
-tarfile
 -e .
