@@ -1,11 +1,10 @@
 numpy
-matplotlib
-seaborn
-flask
+Flask
 gunicorn
 sklearn
 pandas
 PyYAML
-six
 evidently
+dill
+matplotlib
 -e .
