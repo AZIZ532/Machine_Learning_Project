@@ -1,9 +1,11 @@
+
+
 from housing.logger import logging
 from housing.exception import HousingException
 from housing.entity.config_entity import DataValidationConfig
 from housing.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact
 import os,sys
-import pandas  as pd
+import pandas as pd
 from evidently.model_profile import Profile
 from evidently.model_profile.sections import DataDriftProfileSection
 from evidently.dashboard import Dashboard
@@ -64,17 +66,7 @@ class DataValidation:
         try:
             validation_status = False
             
-            #Assigment validate training and testing dataset using schema file
-            #1. Number of Column
-            #2. Check the value of ocean proximity 
-            # acceptable values     <1H OCEAN
-            # INLAND
-            # ISLAND
-            # NEAR BAY
-            # NEAR OCEAN
-            #3. Check column names
-
-
+            
             validation_status = True
             return validation_status 
         except Exception as e:
@@ -143,3 +135,6 @@ class DataValidation:
 
     def __del__(self):
         logging.info(f"{'>>'*30}Data Valdaition log completed.{'<<'*30} \n\n")
+        
+
+

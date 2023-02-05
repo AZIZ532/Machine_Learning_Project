@@ -35,3 +35,4 @@ def get_log_dataframe(file_path):
     log_df["log_message"] = log_df['Time stamp'].astype(str) +":$"+ log_df["message"]
 
     return log_df[["log_message"]]
+

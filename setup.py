@@ -1,31 +1,40 @@
-from setuptools import find_packages, setup
+from setuptools import setup, find_packages
 from typing import List
 
 
+#Declaring variables for setup functions
+PROJECT_NAME= "housing-predictor"
+VERSION="0.0.1"
+AUTHOR="Mitesh Warke"
+DESCRIPTION="This is the first November batch fsds project"
 
-#declaring variables for setup functions
-Project_name = "housing-predictor"
-Version = "0.0.2"
-Author = "Abdul Aziz Khan"
-Description = "This is my first machine learning end to end project"
-Packages = ["housing"]
-Requirement_file_name = "requirements.txt"
+REQUIREMENT_FILE_NAME="requirements.txt"
 
+HYPHEN_E_DOT = "-e ."
 
-def get_requirements_list()->List[str]:
+def get_requirements_list()->List[str]:  
     """
-    Description: This function is going to return list of requirement mention in requirements.txt file
-    
-    return the package name which is used to install for this project
+    Description: This function is going to return list of 
+    requirement mentioned in requirements.txt file
+
+    return function is going to return a list which contain name of libraries 
+    mentioned in requirements.txt file
     """
     
-    with open(Requirement_file_name) as requirement_file:
-        requirement_file.readlines().remove("-e .")
-setup (
-    name=Project_name,
-    version=Version,
-    author=Author,
-    description= Description,
-    packages=find_packages(),
-    install_requires = get_requirements_list()
+    with open(REQUIREMENT_FILE_NAME) as requirement_file:
+        requirement_list = requirement_file.readlines()
+        requirement_list = [requirement_name.replace("\n", "") for requirement_name in requirement_list]
+        if HYPHEN_E_DOT in requirement_list:
+            requirement_list.remove(HYPHEN_E_DOT)
+        return requirement_list
+
+
+setup(
+    name=PROJECT_NAME,
+    version=VERSION,
+    author=AUTHOR,
+    description=DESCRIPTION,
+    packages=find_packages(), #["housing"]
+    install_requires=get_requirements_list()
+
 )
